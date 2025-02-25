@@ -1,14 +1,21 @@
-class ZCL_HELLO_GIT_PK definition
-  public
-  final
-  create public .
+CLASS zcl_hello_git_pk DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+
+    INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZCL_HELLO_GIT_PK IMPLEMENTATION.
+CLASS zcl_hello_git_pk IMPLEMENTATION.
+
+
+  METHOD if_oo_adt_classrun~main.
+   out->write( 'Hello World! I''ve changed that' ).
+  ENDMETHOD.
 ENDCLASS.
